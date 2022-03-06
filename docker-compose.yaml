@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  mysql:
+    container_name: mysql8
+    platform: linux/x86_64
+    image: mysql:latest
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ~/db/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=blessing
+      - MYSQL_DATABASE=church
+    tty: true
+    stdin_open: true
