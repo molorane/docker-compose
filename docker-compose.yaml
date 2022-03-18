@@ -15,3 +15,13 @@ services:
       - MYSQL_DATABASE=church
     tty: true
     stdin_open: true
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:lts
+    privileged: true
+    user: root
+    ports:
+     - 8080:8080
+     - 50000:50000
+    volumes:
+      - ~/docker-volumes/jenkins:/var/jenkins_home
