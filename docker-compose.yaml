@@ -9,7 +9,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ~/db/mysql:/var/lib/mysql
+      - ~/docker-volumes/mysql:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=blessing
       - MYSQL_DATABASE=church
