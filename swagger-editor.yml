@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  swagger-editor:
+    container_name: swagger-editor
+    platform: linux/x86_64
+    image: swaggerapi/swagger-editor
+    restart: always
+    ports:
+      - 1922:8080
