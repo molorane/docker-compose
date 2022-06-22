@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    platform: linux/x86_64
+    image: rabbitmq:3-management
+    restart: always
+    ports:
+      - 15672:15672
+    volumes:
+      - ~/docker-volumes/rabbitmqram1_data:/bitnami
