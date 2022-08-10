@@ -1,0 +1,10 @@
+-- create the databases
+CREATE DATABASE IF NOT EXISTS locationdb;
+
+CREATE DATABASE IF NOT EXISTS attendancedb;
+
+CREATE DATABASE IF NOT EXISTS membersdb;
+
+CREATE DATABASE IF NOT EXISTS campusdb;
+
+CREATE DATABASE IF NOT EXISTS weddingdb;
