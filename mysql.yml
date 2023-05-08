@@ -9,7 +9,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ~/workspace/docker/church/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+      - ~/workspace/docker/docker-compose/setup.sql:/docker-entrypoint-initdb.d/setup.sql
       - ~/docker-volumes/mysql:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=blessing
