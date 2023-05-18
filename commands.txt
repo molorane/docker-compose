@@ -1,5 +1,9 @@
 docker-compose -f mysql.yml up mysql
 
+docker-compose -f mssql.yml up mssql
+
+docker-compose -f jenkins.yml up jenkins
+
 docker-compose -f mysql.yml -f jenkins.yml up mysql
 
 docker logs jenkins | less
