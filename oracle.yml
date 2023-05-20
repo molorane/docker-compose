@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   mysql:
-    container_name: mysql8
+    container_name: oracle19
     platform: linux/x86_64
     image: mysql:latest
     restart: always
@@ -18,9 +18,3 @@ services:
       - SERVICE_NAME=mysql
     tty: true
     stdin_open: true
-    networks: 
-      - spring-app
-networks:
-  spring-app:
-    name: spring-app
-    driver: bridge

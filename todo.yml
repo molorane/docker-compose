@@ -1,0 +1,19 @@
+version: '0.0.1'
+
+services:
+  todo:
+    container_name: todo
+    image: todo:latest
+    privileged: true
+    ports:
+      - 2023:8080
+    expose:
+      - "8080"
+    tty: true
+    stdin_open: true
+    networks:
+      - spring-app
+networks:
+  spring-app:
+    name: spring-app
+    driver: bridge
