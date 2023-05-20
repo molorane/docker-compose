@@ -1,20 +1,18 @@
 version: '3.9'
 
 services:
-  mysql:
+  oracle:
     container_name: oracle19
     platform: linux/x86_64
-    image: mysql:latest
+    image: doctorkirk/oracle-19c
     restart: always
     ports:
-      - 3306:3306
+      - 1521:1521
+      - 5500:5500
     volumes:
-      - ~/workspace/docker/docker-compose/setup.sql:/docker-entrypoint-initdb.d/setup.sql
-      - ~/docker-volumes/mysql:/var/lib/mysql
+      - ~/docker-volumes/oracle:/opt/oracle/oradata
     environment:
-      - MYSQL_ROOT_PASSWORD=blessing
-      - MYSQL_ROOT_HOST=%
-      - SERVICE_TAGS=dev
-      - SERVICE_NAME=mysql
+      - ORACLE_SID=oracle # default: ORCLCDB
+      - ORACLE_PWD=Khauhelo@1991
     tty: true
     stdin_open: true
