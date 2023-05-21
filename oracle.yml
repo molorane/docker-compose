@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  oracle:
+    container_name: oracle19
+    platform: linux/x86_64
+    image: doctorkirk/oracle-19c
+    restart: always
+    ports:
+      - 1521:1521
+      - 5500:5500
+    volumes:
+      - C:\docker-volumes\oracle:/opt/oracle/oradata
+    environment:
+      - ORACLE_SID=test
+      - ORACLE_PWD=Khauhelo@1991
+    tty: true
+    stdin_open: true
