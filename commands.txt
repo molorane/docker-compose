@@ -5,3 +5,7 @@ docker-compose -f mssql.yml up mssql
 docker-compose -f mysql.yml -f jenkins.yml up mysql
 
 docker logs jenkins | less
+
+ORACLE
+alter user <newschemaname> quota unlimited on <tablespacename>
+ALTER USER RAF quota unlimited on USERS;
