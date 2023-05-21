@@ -8,4 +8,5 @@ docker logs jenkins | less
 
 ORACLE
 alter user <newschemaname> quota unlimited on <tablespacename>
+ALTER USER EMPLOYEEDATA quota unlimited on USERS;
 ALTER USER RAF quota unlimited on USERS;
