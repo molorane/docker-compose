@@ -9,7 +9,7 @@ services:
       - 1433:1433
     volumes:
       - ~/workspace/docker/docker-compose/setup.sql:/docker-entrypoint-initdb.d/setup.sql
-      - ~/docker-volumes/mssql:/var/opt/mssql
+      - ~/volumes/mssql:/var/opt/mssql
     environment:
       - ACCEPT_EULA=Y
       - MSSQL_SA_PASSWORD=Khauhelo@1991

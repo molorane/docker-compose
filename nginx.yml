@@ -1,7 +1,7 @@
 web:
   image: nginx
   volumes:
-   - ~/docker-volumes/nginx:/etc/nginx/templates
+   - ~/volumes/nginx:/etc/nginx/templates
   ports:
    - "8080:80"
   environment:

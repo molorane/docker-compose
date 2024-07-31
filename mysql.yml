@@ -10,7 +10,7 @@ services:
       - 3306:3306
     volumes:
       - ~/workspace/docker/docker-compose/setup.sql:/docker-entrypoint-initdb.d/setup.sql
-      - ~/docker-volumes/mysql:/var/lib/mysql
+      - ~/volumes/mysql:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=blessing
       - MYSQL_ROOT_HOST=%

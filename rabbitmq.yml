@@ -9,4 +9,4 @@ services:
     ports:
       - 15672:15672
     volumes:
-      - ~/docker-volumes/rabbitmqram1_data:/bitnami
+      - ~/volumes/rabbitmqram1_data:/bitnami

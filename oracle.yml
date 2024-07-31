@@ -9,7 +9,7 @@ services:
       - 1521:1521
       - 5500:5500
     volumes:
-      - ~/docker-volumes/oracle:/opt/oracle/oradata
+      - ~/volumes/oracle:/opt/oracle/oradata
     environment:
       - ORACLE_SID=test # default: ORCLCDB
       - ORACLE_PWD=Khauhelo@1991
