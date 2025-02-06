@@ -7,3 +7,6 @@ docker-compose -f jenkins.yml up jenkins
 docker-compose -f mysql.yml -f jenkins.yml up mysql
 
 docker logs jenkins | less
+
+The latest one that worked below
+docker compose -f mysql.yml up -d
