@@ -1,0 +1,36 @@
+docker run --name mysql3 -e MYSQL_ROOT_PASSWORD=secret -p 3307:3306 -d mysql
+docker run --name mysql4 -e MYSQL_ROOT_PASSWORD=secret -p 3308:3306 -d mysql
+docker run --name mysql5 -e MYSQL_ROOT_PASSWORD=secret -p 3309:3306 -d mysql
+
+
+Connect to the running MySQL container:
+docker exec -it mysql2 mysql -u root -p
+
+
+CREATE DATABASE employee_db;
+
+USE employee_db;
+
+CREATE TABLE Employee (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone_number VARCHAR(20) UNIQUE,
+    hire_date DATE NOT NULL,
+    salary DECIMAL(10,2) NOT NULL,
+    department_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO Employee (first_name, last_name, email, phone_number, hire_date, salary, department_id) VALUES
+('John', 'Doe', 'john.doe@example.com', '1234567890', '2023-01-15', 55000.00, 1),
+('Alice', 'Smith', 'alice.smith@example.com', '1234567891', '2022-11-20', 60000.00, 2),
+('Bob', 'Johnson', 'bob.johnson@example.com', '1234567892', '2021-05-10', 75000.00, 3),
+('Emma', 'Brown', 'emma.brown@example.com', '1234567893', '2020-09-05', 50000.00, 1),
+('Michael', 'White', 'michael.white@example.com', '1234567894', '2019-06-30', 90000.00, 2);
+
+Or manual connection
+?allowPublicKeyRetrieval=true
