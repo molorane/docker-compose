@@ -21,8 +21,22 @@ docker run --name mysql-3 -p 2522:3306 -e MYSQL_ROOT_PASSWORD=blessing -d mysql:
 docker exec -it mysql-1 bash
 mysql -u root -p
 
-CREATE DATABASE ufs;
-USE ufs;
+CREATE DATABASE ufs_blm;
+USE ufs_blm;
 CREATE TABLE student ( name VARCHAR(50), age INT );
-INSERT INTO student VALUES ('Mothusi', 5);
-INSERT INTO student VALUES ('Ayobami', 5);
+INSERT INTO student VALUES ('Mothusi', 34);
+INSERT INTO student VALUES ('Ayobami', 37);
+
+
+CREATE DATABASE ufs_qwa;
+USE ufs_qwa;
+CREATE TABLE student ( name VARCHAR(50), age INT );
+INSERT INTO student VALUES ('Lerato', 25);
+INSERT INTO student VALUES ('Michael', 18);
+
+
+clod computing
+AWS ec2
+chmod 400 key.pem
+ssh -i owen.pem ec2-user@18.207.173.65
+scp -i owen.pem cloud-demo-0.0.1.jar ec2-user@18.207.173.65:/home/ec2-user
