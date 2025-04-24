@@ -10,3 +10,8 @@ docker logs jenkins | less
 
 The latest one that worked below
 docker compose -f mysql.yml up -d
+
+start mysql instance
+docker run --name mysql-1 -p 2520:3306 -e MYSQL_ROOT_PASSWORD=blessing -d mysql:latest
+docker run --name mysql-2 -p 2521:3306 -e MYSQL_ROOT_PASSWORD=blessing -d mysql:latest
+docker run --name mysql-3 -p 2522:3306 -e MYSQL_ROOT_PASSWORD=blessing -d mysql:latest
