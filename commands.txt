@@ -15,3 +15,14 @@ start mysql instance
 docker run --name mysql-1 -p 2520:3306 -e MYSQL_ROOT_PASSWORD=blessing -d mysql:latest
 docker run --name mysql-2 -p 2521:3306 -e MYSQL_ROOT_PASSWORD=blessing -d mysql:latest
 docker run --name mysql-3 -p 2522:3306 -e MYSQL_ROOT_PASSWORD=blessing -d mysql:latest
+
+?allowPublicKeyRetrieval=true
+
+docker exec -it mysql-1 bash
+mysql -u root -p
+
+CREATE DATABASE ufs;
+USE ufs;
+CREATE TABLE student ( name VARCHAR(50), age INT );
+INSERT INTO student VALUES ('Mothusi', 5);
+INSERT INTO student VALUES ('Ayobami', 5);
