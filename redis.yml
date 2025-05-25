@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  redis-stack:
+    container_name: redis-stack
+    image: redis/redis-stack:latest
+    restart: always
+    ports:
+      - 6379:6379
+      - 8001:8001
+    volumes:
+      - ~/volumes/redis:/data
+    tty: true
+    stdin_open: true
